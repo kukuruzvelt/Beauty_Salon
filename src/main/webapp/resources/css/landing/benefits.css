@@ -1,0 +1,88 @@
+#benefits .benefits-slider .rectangle {
+    position: relative;
+    margin: 0 15px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+
+    background: #FFFFFF;
+    box-shadow: 0 4px 50px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+#benefits .benefits-slider .rectangle .icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+#benefits .benefits-slider .rectangle .name {
+    position: relative;
+    font-weight: 700;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    color: #F4A938;
+}
+
+#benefits .benefits-slider .rectangle .description {
+    position: relative;
+    width: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-weight: 400;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    color: #000000;
+}
+
+#benefits .benefits-slider .slick-arrow {
+    background-color: #FFFFFF;
+}
+
+#benefits .benefits-slider .slick-arrow:active {
+    background-color: #D4D4D4;
+}
+
+@media (max-width: 1199px) {
+    #benefits .benefits-slider .rectangle .name {
+        font-size: 24px;
+    }
+
+    #benefits .benefits-slider .rectangle .description {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 475px) {
+    #benefits .benefits-slider .rectangle {
+        gap: 0;
+        height: 250px;
+    }
+
+    #benefits .benefits-slider .rectangle .icon img {
+        height: 100px;
+        width: auto;
+    }
+
+    #benefits .benefits-slider .rectangle .name {
+        font-size: 16px;
+        margin-top: 8px;
+        margin-bottom: 5px;
+    }
+
+    #benefits .benefits-slider .rectangle .description {
+        font-size: 12px;
+        width: 250px;
+    }
+}

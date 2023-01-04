@@ -4,26 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <title>Catalog</title>
+    <link rel="stylesheet" href="../../resources/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="../../resources/css/landing/common.css">
+    <link rel="stylesheet" href="../../resources/css/catalog.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700">
 </head>
+
 <body>
-<form method="post" action="catalog">
-    <label>
-        <select name="master_id">
-            <tr th:each="master: ${masters}">
-                <option th:value="${master.id}">
-                <td th:text="${master.name}"></td>
-                <td th:text="${master.surname}"></td>
-                </option>
-            </tr>
-        </select>
-    </label>
-    <input type="submit" value="Отправить">
-</form>
-<tr th:each="service: ${services}">
-    <td th:text="${service}"></td>
-    <br>
-</tr>
-<br>
-<a href="main">На головну</a>
+
+<div class="container">
+
+    <div class="choose-master-block">
+        <form method="post" action="catalog">
+            <label>
+                <select name="master_id">
+                    <tr th:each="master: ${masters}">
+                        <option th:value="${master.id}">
+                            <td th:text="${master.name}"></td>
+                            <td th:text="${master.surname}"></td>
+                        </option>
+                    </tr>
+                </select>
+            </label>
+            <input class="get-catalog-btn" type="submit" value="Get Catalog">
+        </form>
+    </div>
+
+    <div th:each="service: ${services}">
+        <div class="service-item" th:text="${service}"></div>
+    </div>
+
+    <div class="main-page-btn">
+        <a href="main">Back to main page</a>
+    </div>
+
+</div>
+
 </body>
+
 </html>

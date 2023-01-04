@@ -1,0 +1,106 @@
+#contacts .rectangle {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    padding: 60px 200px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px 100px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+#contacts .rectangle .item {
+    display: flex;
+    width: 180px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+#contacts .rectangle .item:hover {
+    cursor: pointer;
+}
+
+#contacts .rectangle .item .icon img {
+    transition: transform 0.6s;
+}
+
+#contacts .rectangle .item .icon img:hover {
+    transform: scale(110%);
+}
+
+#contacts .rectangle .item .username {
+    font-weight: 600;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #F4A938;
+}
+
+@media (max-width: 1399px) {
+    #contacts .rectangle {
+        padding: 60px 100px;
+    }
+}
+
+@media (max-width: 1199px) {
+    #contacts .rectangle {
+        gap: 30px 60px;
+    }
+
+    #contacts .rectangle .item {
+        gap: 5px;
+    }
+
+    #contacts .rectangle .item .icon img {
+        width: 130px;
+        height: auto;
+    }
+}
+
+@media (max-width: 991px) {
+    #contacts .rectangle {
+        padding: 60px 40px;
+        gap: 30px 20px;
+    }
+
+    #contacts .rectangle .item .username {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 575px) {
+    #contacts .rectangle {
+        padding: 60px 20px;
+        gap: 30px 10px;
+    }
+}
+
+@media (max-width: 475px) {
+    #contacts .rectangle {
+        padding: 40px 20px;
+        gap: 20px 20px;
+    }
+
+    #contacts .rectangle .item {
+        width: 100px;
+        gap: 2px;
+    }
+
+    #contacts .rectangle .item .icon img {
+        width: 80px;
+        height: auto;
+    }
+
+    #contacts .rectangle .item .username {
+        font-size: 14px;
+    }
+}

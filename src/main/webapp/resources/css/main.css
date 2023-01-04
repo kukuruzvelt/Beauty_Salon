@@ -1,0 +1,36 @@
+.main-menu {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main-menu a {
+    width: 300px;
+    height: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    position: relative;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+
+    background: #FFE49A;
+    border-radius: 20px;
+}
+
+.main-menu a:hover {
+    background: #F4D57F;
+}

@@ -1,0 +1,36 @@
+.container {
+    margin-top: 30px;
+}
+
+.choose-master-block {
+    margin-bottom: 20px;
+}
+
+.service-item {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.main-page-btn a {
+    width: 200px;
+    height: 30px;
+    margin-top: 30px;
+
+    font-size: 12px;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+
+    background: #FFE49A;
+    border-radius: 20px;
+}
+
+.main-page-btn a:hover {
+    background: #F4D57F;
+}

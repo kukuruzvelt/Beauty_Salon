@@ -1,0 +1,72 @@
+.container {
+    margin-top: 30px;
+}
+
+.registration-fields {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.registration-fields div {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.register-btn {
+    width: 150px;
+    height: 40px;
+    margin-top: 15px;
+
+    position: relative;
+    font-weight: 400;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+
+    background: #FFE49A;
+    border-radius: 20px;
+}
+
+.register-btn:hover {
+    background: #F4D57F;
+}
+
+.error-message {
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #dc3545;
+}
+
+.main-page-btn a {
+    width: 200px;
+    height: 30px;
+    margin-top: 30px;
+
+    font-size: 12px;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+
+    background: #FFE49A;
+    border-radius: 20px;
+}
+
+.main-page-btn a:hover {
+    background: #F4D57F;
+}

@@ -1,0 +1,609 @@
+#home {
+    background: linear-gradient(128.22deg, #F4CB38 10.36%, #F4A938 84.38%);
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#home .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#home .header {
+    position: relative;
+    margin-top: 30px;
+    height: 46px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+#home .header .logo-and-name {
+    position: relative;
+    height: 46px;
+    width: 185px;
+
+    text-align: center;
+    border-radius: 10px;
+    background: linear-gradient(to left, transparent 50%, #FFE49A 50%);
+    background-size: 200%;
+    background-position: right;
+    transition: background-position 0.5s ease-in-out;
+}
+
+#home .header .logo-and-name:hover {
+    background-position: left;
+}
+
+#home .header .logo-and-name .logo {
+    position: absolute;
+}
+#home .header .logo-and-name .name {
+    position: absolute;
+    left: 56px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 30px;
+    width: max-content;
+
+    font-weight: 700;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    color: #000000;
+}
+
+#home .header .header-burger {
+    display: none;
+}
+
+#home .header .menu-list {
+    position: relative;
+    height: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    font-weight: 400;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    color: #000000;
+}
+
+#home .header .menu-list a:hover {
+    border-bottom: 1px solid #000000;
+}
+
+#home .header .menu-list .line {
+    display: none;
+}
+
+#home .header .authorization {
+    position: relative;
+
+    font-weight: 400;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 30px;
+
+    color: #000000;
+}
+
+#home .header .authorization .sign-up {
+    position: relative;
+}
+
+#home .header .authorization .sign-up:hover {
+    border-bottom: 1px solid #000000;
+}
+
+#home .header .authorization .log-in {
+    position: relative;
+    width: 100px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    color: #000000;
+
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+
+#home .header .authorization .log-in:hover {
+    color: #FFFFFF;
+    background: #000000;
+    box-shadow: 0 4px 50px rgba(0, 0, 0, 0.25);
+}
+
+#home .header .shadow-background {
+    display: none;
+}
+
+#home .welcome-content {
+    position: relative;
+    margin-bottom: 100px;
+}
+
+#home .welcome-content .salon-photo img {
+    position: relative;
+    width: 100%;
+    z-index: 2;
+    border-radius: 20px;
+}
+
+/*#home .welcome-content .blur-ellipse {
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    max-height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 200px;
+    z-index: 1;
+
+    border-radius: 50%;
+    background: #D9D9D9;
+    filter: blur(250px);
+}*/
+
+#home .welcome-content .rectangle {
+    position: absolute;
+    width: 80%;
+    height: 180px;
+    bottom: -53px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+
+    background: #FFE49A;
+    border-radius: 20px;
+}
+
+#home .welcome-content .rectangle .name {
+    position: absolute;
+    top: 53px;
+    left: 60px;
+
+    font-weight: 700;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+}
+
+#home .welcome-content .rectangle .description {
+    position: absolute;
+    bottom: 53px;
+    left: 60px;
+
+    font-weight: 400;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+}
+
+#home .welcome-content .rectangle .main-btn {
+    position: absolute;
+    right: 60px;
+    width: 300px;
+    height: 63px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    font-weight: 700;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    color: #FFFFFF;
+
+    background: #F44F38;
+    box-shadow: 0 4px 50px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+#home .welcome-content .rectangle .main-btn:hover {
+    background: #F43838;
+}
+
+@media (max-width: 1399px) {
+    #home .welcome-content .rectangle .name {
+        left: 40px;
+    }
+
+    #home .welcome-content .rectangle .description {
+        left: 40px;
+    }
+
+    #home .welcome-content .rectangle .main-btn {
+        right: 40px;
+    }
+}
+
+@media (max-width: 1199px) {
+    #home .header {
+        height: 30px;
+    }
+
+    #home .header .logo-and-name {
+        height: 30px;
+        width: 145px;
+    }
+
+    #home .header .logo-and-name .logo img {
+        display: block;
+        height: 30px;
+    }
+    #home .header .logo-and-name .name {
+        left: 40px;
+        height: 16px;
+
+        font-size: 16px;
+    }
+
+    #home .header .menu-list {
+        height: 20px;
+
+        gap: 15px;
+        font-size: 14px;
+    }
+
+    #home .header .authorization {
+        gap: 15px;
+        font-size: 14px;
+    }
+
+    #home .header .authorization .log-in {
+        width: 90px;
+        height: 28px;
+    }
+
+    #home .welcome-content .rectangle {
+        height: 150px;
+        bottom: -50px;
+    }
+
+    #home .welcome-content .rectangle .name {
+        top: 46px;
+        left: 30px;
+        font-size: 26px;
+    }
+
+    #home .welcome-content .rectangle .description {
+        bottom: 46px;
+        left: 30px;
+        font-size: 16px;
+    }
+
+    #home .welcome-content .rectangle .main-btn {
+        width: 260px;
+        height: 50px;
+
+        right: 30px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 991px) {
+    #home .header .logo-and-name:hover {
+        background-position: right;
+    }
+
+    #home .header .shadow-background {
+        position: fixed;
+        margin: 0;
+        padding: 0;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 4;
+
+        background: rgba(0, 0, 0, 0.7);
+    }
+
+    #home .header .shadow-background.active {
+        display: block;
+    }
+
+    #home .header .header-burger {
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        width: 30px;
+        height: 20px;
+        z-index: 7;
+        cursor: pointer;
+    }
+
+    #home .header .header-burger span {
+        position: absolute;
+        background-color: #000000;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+        transition: all 0.3s ease 0s;
+    }
+
+    #home .header .header-burger:before,
+    #home .header .header-burger:after {
+        content: '';
+        background-color: #000000;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all 0.3s ease 0s;
+    }
+
+    #home .header .header-burger:before {
+        top: 0;
+    }
+
+    #home .header .header-burger:after {
+        bottom: 0;
+    }
+
+    #home .header .header-burger.active span {
+        transform: scale(0);
+    }
+
+    #home .header .header-burger.active:before {
+        transform: rotate(45deg);
+        top: 9px;
+    }
+
+    #home .header .header-burger.active:after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+
+    #home .header .menu-list {
+        position: absolute;
+        top: -300px;
+        right: -10px;
+        padding-top: 35px;
+        transform: none;
+        width: 300px;
+        height: 221px;
+        background-color: #FFE49A;
+        border-radius: 20px;
+        justify-content: flex-start;
+        gap: 0;
+        z-index: 6;
+        transition: all 0.3s ease 0s;
+
+        flex-direction: column;
+    }
+
+    #home .header .menu-list a:hover {
+        border-bottom: none;
+    }
+
+    #home .header .menu-list li,
+    #home .header .authorization .sign-up,
+    #home .header .authorization .log-in {
+        width: 200px;
+        height: 35px;
+        border-radius: 10px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    #home .header .authorization .log-in {
+        border: none;
+    }
+
+    #home .header .menu-list li:hover {
+        background: #F4D57F;
+    }
+
+    #home .header .menu-list.active {
+        top: -10px;
+    }
+
+    #home .header .menu-list .line {
+        display: block;
+        position: absolute;
+        width: 150px;
+        height: 1px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 6;
+
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    #home .header .authorization {
+        position: absolute;
+        top: -400px;
+        right: -10px;
+        transform: none;
+        width: 300px;
+        height: fit-content;
+        padding-top: 56px;
+        padding-bottom: 35px;
+        display: flex;
+        gap: 0;
+        justify-content: flex-start;
+        background-color: #FFE49A;
+        border-radius: 20px;
+        z-index: 5;
+        transition: all 0.3s ease 0s;
+
+        flex-direction: column;
+    }
+
+    #home .header .authorization .sign-up a:hover {
+        border-bottom: none;
+    }
+
+    #home .header .authorization .sign-up:hover {
+        background: #F4D57F;
+        border-bottom: none;
+    }
+
+    #home .header .authorization .log-in:hover {
+        color: #000000;
+        background: #F4D57F;
+        box-shadow: none;
+    }
+
+    #home .header .authorization.active {
+        top: 165px;
+    }
+
+    #home .welcome-content {
+        margin-bottom: 180px;
+    }
+
+    #home .welcome-content .rectangle {
+        height: 200px;
+        bottom: -120px;
+    }
+
+    #home .welcome-content .rectangle .name {
+        top: 37px;
+        width: max-content;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #home .welcome-content .rectangle .description {
+        top: 75px;
+        width: max-content;
+        height: fit-content;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #home .welcome-content .rectangle .main-btn {
+        top: unset;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 37px;
+    }
+}
+
+@media (max-width: 767px) {
+    #home .welcome-content .rectangle {
+        width: 90%;
+        bottom: -140px;
+    }
+}
+
+@media (max-width: 475px) {
+    #home .header {
+        height: 26px;
+    }
+
+    #home .header .logo-and-name {
+        height: 26px;
+        width: 121px;
+    }
+
+    #home .header .logo-and-name .logo img {
+        display: block;
+        height: 26px;
+    }
+    #home .header .logo-and-name .name {
+        left: 32px;
+        height: 16px;
+
+        font-size: 14px;
+    }
+
+    #home .header .menu-list {
+        width: 100vw;
+    }
+
+    #home .header .authorization {
+        width: 100vw;
+    }
+
+    #home .welcome-content {
+        margin-bottom: 130px;
+    }
+
+    #home .welcome-content .rectangle {
+        width: 80%;
+        height: 150px;
+        max-height: 100%;
+        bottom: -100px;
+    }
+
+    #home .welcome-content .rectangle .name {
+        font-size: 18px;
+        top: 30px;
+    }
+
+    #home .welcome-content .rectangle .description {
+        font-size: 12px;
+        top: 54px;
+    }
+
+    #home .welcome-content .rectangle .main-btn {
+        font-size: 14px;
+        height: 40px;
+        width: 200px;
+        bottom: 30px;
+    }
+}
+
+@media (max-width: 400px) {
+    #home .welcome-content {
+        margin-bottom: 180px;
+    }
+
+    #home .welcome-content .rectangle {
+        width: 90%;
+        height: 170px;
+        bottom: -140px;
+        max-height: unset;
+    }
+
+    #home .welcome-content .rectangle .name {
+        font-size: 18px;
+        top: 25px;
+        width: 200px;
+        text-align: center;
+    }
+
+    #home .welcome-content .rectangle .description {
+        font-size: 12px;
+        top: 75px;
+    }
+
+    #home .welcome-content .rectangle .main-btn {
+        font-size: 14px;
+        height: 40px;
+        width: 200px;
+        bottom: 25px;
+    }
+}

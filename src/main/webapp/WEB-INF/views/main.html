@@ -1,19 +1,29 @@
 <!DOCTYPE html>
-<html lang="en"  xmlns:th="http://thymeleaf.org">
+<html lang="en" xmlns:th="http://thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <title>Main</title>
+    <link rel="stylesheet" href="../../resources/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="../../resources/css/landing/common.css">
+    <link rel="stylesheet" href="../../resources/css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700">
 </head>
+
 <body>
 <tr th:text="${message}"/>
-<tr th:text="${error}" />
-<a href="login">Login</a>
-<br>
-<a href="register">Register</a>
-<br>
-<a href="catalog">Catalog</a>
-<br>
-<a href="staffList">Staff list</a>
-<br>
+<tr th:text="${error}"/>
+
+<div class="container">
+
+    <div class="main-menu">
+        <a href="login">Login</a>
+        <a href="register">Register</a>
+        <a href="catalog">Catalog</a>
+        <a href="staffList">Staff list</a>
+    </div>
+
+</div>
+
 </body>
 </html>

@@ -32,6 +32,11 @@ public class MainController {
         this.roleDAO = roleDAO;
     }
 
+    @GetMapping("/")
+    public String index() {
+        return "index";
+    }
+
     @GetMapping("/main")
     public String main() {
         return "main";
@@ -59,7 +64,7 @@ public class MainController {
     @GetMapping("/catalog")
     public String getCatalog(Model model) {
         ArrayList<User> masters = userDAO.getUsersByRole(roleDAO.getRole("MASTER").get());
-        masters.add(0, new User.UserBuilder().withName("Выберете мастера").withSurname("").build());
+        masters.add(0, new User.UserBuilder().withName("Choose a master").withSurname("").build());
 
         ArrayList<Service> services = serviceDAO.getServices();
 
@@ -72,7 +77,7 @@ public class MainController {
     @PostMapping("/catalog")
     public String catalog(Model model, @ModelAttribute("master_id") Integer master_id) {
         ArrayList<User> masters = userDAO.getUsersByRole(roleDAO.getRole("MASTER").get());
-        masters.add(0, new User.UserBuilder().withName("Выберете мастера").withSurname("").build());
+        masters.add(0, new User.UserBuilder().withName("Choose a master").withSurname("").build());
 
         ArrayList<Service> services;
         if (master_id != null && master_id != 0){
@@ -97,8 +102,8 @@ public class MainController {
         ArrayList<Service> services = serviceDAO.getServices();
         ArrayList<User> masters = userDAO.getUsersByRole(roleDAO.getRole("MASTER").get());
         ArrayList<SortByEntity> sortBy = new ArrayList<>(Arrays.asList(
-                new SortByEntity("rating", "Рейтинг"), new SortByEntity("surname", "Фамилия")));
-        services.add(0, new Service.ServiceBuilder().withName("Выберете услугу").build());
+                new SortByEntity("rating", "Rating"), new SortByEntity("surname", "Surname")));
+        services.add(0, new Service.ServiceBuilder().withName("Choose a service").build());
 
         model.addAttribute("sortBy", sortBy);
         model.addAttribute("masters", masters);
@@ -111,10 +116,10 @@ public class MainController {
     public String staffList(Model model, @ModelAttribute("service_id") Integer service_id
             , @ModelAttribute("sort_by") String sort_by){
         ArrayList<Service> services = serviceDAO.getServices();
-        services.add(0, new Service.ServiceBuilder().withName("Выберете услугу").build());
+        services.add(0, new Service.ServiceBuilder().withName("Choose a service").build());
         ArrayList<User> masters;
         ArrayList<SortByEntity> sortBy = new ArrayList<>(Arrays.asList(
-                new SortByEntity("rating", "Рейтинг"), new SortByEntity("surname", "Фамилия")));
+                new SortByEntity("rating", "Rating"), new SortByEntity("surname", "Surname")));
 
         if (service_id != null && service_id != 0){
             Service chosenService = serviceDAO.getService(service_id).get();

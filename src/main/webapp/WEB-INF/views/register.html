@@ -1,26 +1,55 @@
 <!DOCTYPE html>
-<html lang="en"  xmlns:th="http://thymeleaf.org">
+<html lang="en" xmlns:th="http://thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Registration</title>
+    <link rel="stylesheet" href="../../resources/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="../../resources/css/landing/common.css">
+    <link rel="stylesheet" href="../../resources/css/register.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700">
 </head>
+
 <body>
-<div th:text="${error}" />
-<form th:method ="POST"  th:action ="@{/register}" th:object="${user}">
-    <label for = "e">Enter name: </label>
-    <input type="text" th:field = "*{name}" id="n">
-    <br/>
-    <label for = "p">Enter surname: </label>
-    <input type="text" th:field = "*{surname}" id="s">
-    <br/>
-    <label for = "e">Enter email: </label>
-    <input type="text" th:field = "*{email}" id="e">
-    <br/>
-    <label for = "p">Enter password: </label>
-    <input type="password" th:field = "*{password}" id="p">
-    <br/>
-    <input type="submit" value="Register">
-</form>
+
+<div class="container">
+
+    <div class="error-message" id="errorMessage" th:text="${error}"/>
+
+    <div class="registration-fields">
+
+        <form th:method="POST" th:action="@{/register}" th:object="${user}">
+
+            <div>
+                <label for="e">Enter name: </label>
+                <input type="text" th:field="*{name}" id="n">
+            </div>
+
+            <div>
+                <label for="p">Enter surname: </label>
+                <input type="text" th:field="*{surname}" id="s">
+            </div>
+
+            <div>
+                <label for="e">Enter email: </label>
+                <input type="text" th:field="*{email}" id="e">
+            </div>
+
+            <div>
+                <label for="p">Enter password: </label>
+                <input type="password" th:field="*{password}" id="p">
+            </div>
+
+            <input class="register-btn" type="submit" value="Register">
+
+        </form>
+
+    </div>
+
+    <div class="main-page-btn">
+        <a href="main">Back to main page</a>
+    </div>
+
+</div>
 
 </body>
 </html>
