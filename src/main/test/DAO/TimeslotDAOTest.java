@@ -8,6 +8,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import task.models.dao.TimeslotDAO;
+import task.models.entity.Timeslot;
 import task.models.entity.User;
 import task.models.service.DatetimeService;
 
@@ -35,8 +36,9 @@ public class TimeslotDAOTest {
   }
 
   @ParameterizedTest
-  @MethodSource("servicesForMaster")
+  @MethodSource("timeslots")
   void getTest(String time, String timeslot) {
+    Assertions.assertEquals(timeslotDAO.getTimeslot(time).get().toString(), timeslot);
 
   }
 
@@ -58,10 +60,11 @@ public class TimeslotDAOTest {
 
   private static Stream<Arguments> timeslots() {
     return Stream.of(
-        Arguments.of(1, "service1 - 100"),
-        Arguments.of(2, "service2 - 200"),
-        Arguments.of(3, "service3 - 300"),
-        Arguments.of(4, "service4 - 400")
+        Arguments.of("10:00:00", "10:00:00"),
+        Arguments.of("10:30:00", "10:30:00"),
+        Arguments.of("11:00:00", "11:00:00"),
+        Arguments.of("11:30:00", "11:30:00"),
+        Arguments.of("12:00:00", "12:00:00")
     );
   }
 
