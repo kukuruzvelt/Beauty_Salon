@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<html>
+<head>
+    <title>Choose master</title>
+</head>
+<body>
+<form method="post" action="/user/request_date">
+    <select name="master_id">
+        <tr th:each="master: ${masters}">
+            <option th:value="${master.id}">
+                <td th:text="${master.name}"></td>
+                <td th:text="${master.surname}"></td>
+            </option>
+        </tr>
+    </select>
+    <input type="text" name="service_id" th:value="${service_id}" hidden>
+    <input type="submit" value="Отправить"></p>
+</form>
+<br>
+<a href="/user/main">На головну</a>
+
+</body>
+</html>

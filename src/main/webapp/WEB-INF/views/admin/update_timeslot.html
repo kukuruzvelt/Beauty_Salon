@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Change timeslot</title>
+</head>
+<body>
+
+<form method="post" action="/admin/request_update_time">
+    <input type="text" name="request_id" th:value="${request_id}" hidden>
+    <input type="text" name="version" th:value="${request.version}" hidden>
+    <tr th:each="timeslot: ${timeslots}">
+        <button type="submit" name="time" th:value="${timeslot}"> <th th:text="${timeslot}"></th></button>
+    </tr>
+</form>
+
+<br>
+<a href="/admin/main">На головну</a>
+
+</body>
+</html>

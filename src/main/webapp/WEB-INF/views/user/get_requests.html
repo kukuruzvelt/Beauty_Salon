@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Requests list</title>
+</head>
+<body>
+
+<tr th:each="request: ${requests}">
+    <td th:text="${request}" />
+    <br>
+</tr>
+
+</body>
+</html>

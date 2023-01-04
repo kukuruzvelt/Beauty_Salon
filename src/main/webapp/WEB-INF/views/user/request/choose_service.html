@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<html>
+<head>
+    <title>Choose service</title>
+</head>
+<body>
+<form method="post" action="/user/request_master">
+    <select name="service_id">
+        <tr th:each="service: ${services}">
+            <option th:value="${service.id}">
+                <td th:text="${service}"></td>
+            </option>
+        </tr>
+    </select>
+
+    <input type="submit" value="Отправить"></p>
+</form>
+<br>
+<a href="/user/main">На головну</a>
+
+</body>
+</html>

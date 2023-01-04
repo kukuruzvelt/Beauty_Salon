@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Choose time</title>
+</head>
+<body>
+<tr th:text="${message}"></tr>
+<tr th:text="${error}"></tr>
+<br>
+<form method="post" action="/user/create_request">
+    <input type="date" name="date" th:value="${date}" hidden><br/>
+    <input type="text" name="service_id" th:value="${service_id}" hidden>
+    <input type="text" name="master_id" th:value="${master_id}" hidden>
+    <tr th:each="timeslot: ${timeslots}">
+        <button type="submit" name="time" th:value="${timeslot}"> <th th:text="${timeslot}"></th></button>
+    </tr>
+</form>
+
+<br>
+<a href="/user/main">На головну</a>
+
+</body>
+</html>

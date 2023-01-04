@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<html>
+<head>
+    <title>Choose date</title>
+</head>
+<body>
+<form method="post" action="/user/request_time">
+    <input type="date" name="date" th:min="${min}" th:max="${max}" required><br/>
+    <input type="text" name="service_id" th:value="${service_id}" hidden>
+    <input type="text" name="master_id" th:value="${master_id}" hidden>
+    <input class="button" type="submit" value="Подтвердить">
+</form>
+<br>
+<a href="/user/main">На головну</a>
+
+</body>
+</html>

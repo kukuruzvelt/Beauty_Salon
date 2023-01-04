@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<html>
+<head>
+    <title>Payment</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<h1>Пополнение счета</h1><br/>
+
+<form method="post" action="/user/payment">
+    <tr th:text="${error}"/><br/>
+    <input type="number" placeholder="Сумма" name="money" min="0"><br/>
+    <input class="button" type="submit" value="Оплатить">
+</form>
+<br/>
+<a href="/user/main">В личный кабинет</a>
+</body>
+</html>

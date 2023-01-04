@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Catalog</title>
+</head>
+<body>
+<form method="post" action="catalog">
+    <label>
+        <select name="master_id">
+            <tr th:each="master: ${masters}">
+                <option th:value="${master.id}">
+                <td th:text="${master.name}"></td>
+                <td th:text="${master.surname}"></td>
+                </option>
+            </tr>
+        </select>
+    </label>
+    <input type="submit" value="Отправить">
+</form>
+<tr th:each="service: ${services}">
+    <td th:text="${service}"></td>
+    <br>
+</tr>
+<br>
+<a href="main">На головну</a>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Staff list</title>
+</head>
+<body>
+<form method="post" action="staffList">
+    <select name="service_id">
+        <tr th:each="service: ${services}">
+            <option th:value="${service.id}">
+                <td th:text="${service.name}"></td>
+            </option>
+        </tr>
+    </select>
+
+    <select name="sort_by">
+        <tr th:each="sort_by: ${sortBy}">
+            <option th:value="${sort_by.callback}">
+                <td th:text="${sort_by.name}"></td>
+            </option>
+        </tr>
+    </select>
+        <input type="submit" value="Отправить">
+</form>
+
+<tr th:each="master: ${masters}">
+    <td th:text="${master.name}"></td>
+    <br>
+</tr>
+<br>
+<a href="main">На головну</a>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Choose request</title>
+</head>
+<body>
+<tr th:text="${message}"></tr><br>
+<tr th:text="${error}"></tr>
+<form method="post" action="/admin/manage_request">
+    <tr th:each="request: ${requests}">
+        <button type="submit" name="request_id" th:value="${request.id}"> <th th:text="${request}"></th></button>
+        <br>
+    </tr>
+</form>
+
+<br>
+<a href="/admin/main">На головну</a>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage requests</title>
+</head>
+<body>
+<th th:text="${request}"></th>
+<br>
+<td th:if="${isActual}">
+    <form method="post" action="/admin/request_approve">
+        <input type="text" name="version" th:value="${request.version}" hidden>
+        <button type="submit" name="request_id" th:value="${request.id}">
+            Approve
+        </button>
+    </form>
+    <form method="post" action="/admin/request_change">
+        <input type="text" name="version" th:value="${request.version}" hidden>
+        <button type="submit" name="request_id" th:value="${request.id}">
+            Update time
+        </button>
+    </form>
+</td>
+<form method="post" action="/admin/request_cancel">
+    <input type="text" name="version" th:value="${request.version}" hidden>
+    <button type="submit" name="request_id" th:value="${request.id}">
+        Cancel
+    </button>
+</form>
+<br>
+<a href="/admin/main">На головну</a>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Schedule</title>
+</head>
+<body>
+<tr th:text="${message}"></tr>
+<tr th:text="${error}"></tr>
+<form method="post" action="/master/complete_request">
+    <tr th:each="request: ${requests}">
+
+        <th th:text="${request.timeslot.time}"></th>
+        <th th:text="${request.service.name}"></th>
+        <th th:text="${request.status}"></th>
+
+        <td th:unless="${request.id == 0 || request.status == completeStatus}">
+            <input type="text" name="version" th:value="${request.version}" hidden>
+            <button type="submit" name="request_id" th:value="${request.id}">Complete</button>
+        </td>
+
+        <br>
+    </tr>
+</form>
+<br>
+<a href="/master/main">На головну</a>
+
+</body>
+</html>
