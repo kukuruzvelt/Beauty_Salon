@@ -1,10 +1,9 @@
 package DAO;
 
-import static org.junit.Assert.assertEquals;
-
 import java.util.ArrayList;
 import java.util.stream.Stream;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -22,14 +21,14 @@ public class ServiceDAOTest {
   }
 
   @Test
-  public void getAllTest() {
-    assertEquals(serviceDAO.getServices().size(), 4);
+  void getAllTest() {
+    Assertions.assertEquals(serviceDAO.getServices().size(), 4);
   }
 
   @ParameterizedTest
   @MethodSource("services")
   void getTest(int id, String service) {
-    assertEquals(serviceDAO.getService(id).get().toString(), service);
+    Assertions.assertEquals(serviceDAO.getService(id).get().toString(), service);
   }
 
   @ParameterizedTest
@@ -37,7 +36,7 @@ public class ServiceDAOTest {
   void getForMasterTest(User user, ArrayList<Service> services) {
     ArrayList<String> resultServices = new ArrayList<>();
     serviceDAO.getServicesForMaster(user).forEach(i -> resultServices.add(i.toString()));
-    assertEquals(resultServices, services);
+    Assertions.assertEquals(resultServices, services);
   }
 
   private static Stream<Arguments> services() {
