@@ -9,3 +9,6 @@ A regular user can replenish his account, create requests for services and view 
 The master can see his schedule and mark the services performed
 ### Admin features
 Admin can see applications, accept them, shift them to another time or cancel them
+  
+## Landing Page  
+![196374714-dfed2a70-7006-445f-ae55-144a89dabce6](https://user-images.githubusercontent.com/110092103/211095849-0989dcea-0a4c-4366-a82c-4fa3466b9a9d.png)
