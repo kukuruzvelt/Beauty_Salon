@@ -5,7 +5,6 @@ insert into `mydb`.`Timeslot` value(default, '11:30:00');
 insert into `mydb`.`Timeslot` value(default, '12:00:00');
 insert into `mydb`.`Timeslot` value(default, '12:30:00');
 insert into `mydb`.`Timeslot` value(default, '13:00:00');
-insert into `mydb`.`Timeslot` value(default, '14:30:00');
 insert into `mydb`.`Timeslot` value(default, '14:00:00');
 insert into `mydb`.`Timeslot` value(default, '14:30:00');
 insert into `mydb`.`Timeslot` value(default, '15:00:00');
