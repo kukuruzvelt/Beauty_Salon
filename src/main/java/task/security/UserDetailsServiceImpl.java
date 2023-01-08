@@ -23,7 +23,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
         User user = userDao.getUser(email)
-                .orElseThrow(() -> new UsernameNotFoundException("No user with such username"));
+                .orElseThrow(() -> new UsernameNotFoundException("No user with such email"));
         return new org.springframework.security.core.userdetails.User(user.getEmail(), user.getPassword(),
                 true, true, true, true,
                 roleDao.roleToAuthorityList(roleDao.getRole(user.getRole_id()).get()));

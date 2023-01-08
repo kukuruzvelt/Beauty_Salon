@@ -48,8 +48,15 @@ public class MainController {
     }
 
     @PostMapping("/register")
-    public String create(Model model, @ModelAttribute("user") User user) {
+    public String create(Model model, @ModelAttribute("name") String name,
+        @ModelAttribute("surname") String surname, @ModelAttribute("email") String email,
+        @ModelAttribute("password") String password) {
+        User user = new User.UserBuilder().withName(name).withSurname(surname).withPassword(password)
+            .withEmail(email).build();
         try {
+            System.out.println("CHECKING REGISTERED DATA");
+            System.out.println(name);
+
             userDAO.registerUser(user);
             model.addAttribute("message", "Success");
             return "main";

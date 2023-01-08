@@ -8,7 +8,6 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import task.models.dao.TimeslotDAO;
-import task.models.entity.Timeslot;
 import task.models.entity.User;
 import task.models.service.DatetimeService;
 
